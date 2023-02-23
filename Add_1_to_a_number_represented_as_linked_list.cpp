@@ -24,15 +24,15 @@ struct Node
 Node *addOne(Node *head)
 {
    // Your Code here
-    Node *curr, *prev, *next;
-    curr = head;
+    Node *cu, *prev, *next;
+    cu = head;
     prev = NULL;
     
-    while(curr != NULL){
-        next = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = next;
+    while(cu != NULL){
+        next = cu->next;
+        cu->next = prev;
+        prev = cu;
+        cu= next;
     }
     
     head = prev;
@@ -63,14 +63,14 @@ Node *addOne(Node *head)
             head = temp1;
     }
     
-    curr = head;
+    cu = head;
     prev = NULL;
     
-    while(curr != NULL){
-        next = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = next;
+    while(cu != NULL){
+        next = cu->next;
+        cu->next = prev;
+        prev = cu;
+        cu = next;
     }
     
     head = prev;
